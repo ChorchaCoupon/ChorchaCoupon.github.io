@@ -1,6 +1,13 @@
-function copyCode(){
+function copyCode(btn){
 navigator.clipboard.writeText("snh20");
-alert("Copied: snh20");
+
+btn.classList.add("copy-success");
+btn.querySelector(".copy-text").innerText = "Copied ✓";
+
+setTimeout(()=>{
+btn.classList.remove("copy-success");
+btn.querySelector(".copy-text").innerText = "Copy Code";
+},2000);
 }
 
 function toggleMenu(){

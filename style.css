@@ -28,3 +28,38 @@ section{padding:80px 0;text-align:center}
 .faq-content p{padding:10px 0;color:#ccc}
 @media(max-width:992px){.features-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){nav{display:none;flex-direction:column;width:100%}.menu-toggle{display:block}.features-grid{grid-template-columns:1fr}}
+.copy-animated{
+background:#e10600;
+color:#fff;
+border:none;
+padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+transition:0.3s;
+}
+
+.copy-animated:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px rgba(225,6,0,0.6);
+}
+
+.copy-success{
+background:#00c853 !important;
+}
+
+.copy-animated::after{
+content:"";
+position:absolute;
+width:0;
+height:100%;
+background:rgba(255,255,255,0.2);
+top:0;
+left:0;
+transition:0.4s;
+}
+
+.copy-animated:hover::after{
+width:100%;
+}
