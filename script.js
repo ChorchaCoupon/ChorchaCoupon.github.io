@@ -24,15 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // ==========================
   const menu = document.getElementById("menu");
 
-  window.toggleMenu = function () {
-    if (menu) menu.classList.toggle("active");
-  };
-
-  document.querySelectorAll("#menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      if (menu) menu.classList.remove("active");
-    });
+window.toggleMenu = function (btn) {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+  btn.classList.toggle("open");
+};
+document.querySelectorAll("#menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+    document.querySelector(".menu-toggle").classList.remove("open");
   });
+});
 
 
   // ==========================
