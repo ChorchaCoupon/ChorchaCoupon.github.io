@@ -32,10 +32,20 @@
 <meta property="og:type" content="website">
 
 <link rel="icon" href="favicon.ico">
+<link rel="preload" href="style.css" as="style">
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</noscript>
+
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
 
 <!-- COMBINED STRUCTURED DATA -->
 <script type="application/ld+json">
@@ -117,7 +127,7 @@
 <div class="container nav">
 
 <div class="logo"> 
-<img src="logo.webp" alt="Chorcha Logo">
+<img src="logo.webp" alt="Chorcha Logo" width="40" height="40" loading="lazy" decoding="async">
 <span>Chorcha Coupon Code</span>
 </div>
 
@@ -635,7 +645,7 @@ Ensure correct spelling of snh20
 
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 
 </html>
