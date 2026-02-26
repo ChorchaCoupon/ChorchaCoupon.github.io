@@ -1,16 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #000;
-  color: #fff;
-  line-height: 1.6;
-}
-
 @font-face {
   font-family: 'Poppins';
   src: url('fonts/Poppins-Regular.woff2') format('woff2');
@@ -33,6 +20,18 @@ body {
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
 }
 
 .container {
@@ -402,4 +401,5 @@ section {
   .footer-social {
     justify-content: center;
   }
+
 }
