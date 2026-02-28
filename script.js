@@ -75,21 +75,29 @@ document.querySelectorAll("#menu a").forEach(link => {
   });
 
 
-  // ==========================
-  // LANGUAGE SWITCH
-  // ==========================
-  window.setLang = function (lang) {
-    document.documentElement.lang = lang;
+// ==========================
+// LANGUAGE SWITCH (URL + LOCALSTORAGE)
+// ==========================
+window.setLang = function (lang) {
 
-    document.querySelectorAll("[data-en]").forEach(el => {
-      const text = el.getAttribute("data-" + lang);
-      if (text) el.textContent = text;
-    });
+  document.documentElement.lang = lang;
 
-    localStorage.setItem("lang", lang);
-  };
+  document.querySelectorAll("[data-en]").forEach(el => {
+    const text = el.getAttribute("data-" + lang);
+    if (text) el.textContent = text;
+  });
 
+  localStorage.setItem("lang", lang);
+};
+
+
+// Detect language from URL
+const urlParams = new URLSearchParams(window.location.search);
+const urlLang = urlParams.get("lang");
+
+if (urlLang === "bn" || urlLang === "en") {
+  setLang(urlLang);
+} else {
   const saved = localStorage.getItem("lang");
-  if (saved) window.setLang(saved);
-
-});
+  if (saved) setLang(saved);
+}
